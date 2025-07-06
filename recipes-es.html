@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recetas - VeganTreats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-image: url('images/BG.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 40px 20px;
+      min-height: 100vh;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+      color: #000;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 40px;
+      color: #2e8b57;
+      margin-bottom: 20px;
+    }
+
+    #search, #category-filter, #difficulty-filter {
+      padding: 8px;
+      font-size: 16px;
+      width: 300px;
+      margin-bottom: 30px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .recipes-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .recipe {
+      background-color: white;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-align: left;
+    }
+
+    .recipe:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .recipe img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .recipe-info {
+      padding: 15px;
+    }
+
+    .recipe-info h2 {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0 0 10px 0;
+      color: #2e8b57;
+      font-size: 22px;
+    }
+
+    .recipe-info p {
+      font-family: 'Quicksand', sans-serif;
+      margin: 5px 0;
+      font-size: 16px;
+      color: #444;
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #2e8b57;
+      font-weight: bold;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 18px;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Recetas Veganas</h1>
+
+  <input type="text" id="search" placeholder="Buscar receta..." />
+
+  <select id="category-filter">
+    <option value="">Todas las categorías</option>
+    <option value="rice dishes">Arroces</option>
+    <option value="pasta">Pasta</option>
+    <option value="soups & stews">Sopas y guisos</option>
+    <option value="salads">Ensaladas</option>
+    <option value="desserts">Postres</option>
+    <option value="stews">Guisos</option>
+    <option value="appetizers">Entrantes</option>
+  </select>
+
+  <select id="difficulty-filter">
+    <option value="">Todas las dificultades</option>
+    <option value="easy">Fácil</option>
+    <option value="medium">Media</option>
+    <option value="hard">Difícil</option>
+  </select>
+
+  <div class="recipes-container">
+    <a href="recipes/es/gazpacho.html" class="recipe" data-category="soups & stews" data-difficulty="easy">
+      <img src="images/gazpacho.jpg" alt="Gazpacho" />
+      <div class="recipe-info">
+        <h2>Gazpacho</h2>
+        <p>Dificultad: Fácil</p>
+        <p>Tiempo: 5 min</p>
+      </div>
+    </a>
+
+    <a href="recipes/es/cocido_madrileño_vegano.html" class="recipe" data-category="soups & stews" data-difficulty="medium">
+      <img src="images/vegan_madrid_stew.jpg" alt="Guiso Madrileño Vegano" />
+      <div class="recipe-info">
+        <h2>Cocido Madrileño Vegano</h2>
+        <p>Dificultad: Media</p>
+        <p>Tiempo: 30 min</p>
+      </div>
+    </a>
+
+    <a href="recipes/es/sopa_de_lentejas.html" class="recipe" data-category="soups & stews" data-difficulty="medium">
+      <img src="images/lentil_soup.jpg" alt="Sopa de Lentejas" />
+      <div class="recipe-info">
+        <h2>Sopa de Lentejas</h2>
+        <p>Dificultad: Facil</p>
+        <p>Tiempo: 30 min</p>
+      </div>
+    </a>
+
+    <a href="recipes/es/guacamole.html" class="recipe" data-category="soups & stews" data-difficulty="medium">
+      <img src="images/guacamole.jpg" alt="Guacamole" />
+      <div class="recipe-info">
+        <h2>Guacamole</h2>
+        <p>Dificultad: Facil</p>
+        <p>Tiempo: 5 min</p>
+      </div>
+    </a>
+
+    <a href="recipes/es/pico_de_gallo.html" class="recipe" data-category="soups & stews" data-difficulty="medium">
+      <img src="images/pico_de_gallo.jpg" alt="Pico de gallo" />
+      <div class="recipe-info">
+        <h2>Pico de Gallo</h2>
+        <p>Dificultad: Facil</p>
+        <p>Tiempo: 5 min</p>
+      </div>
+    </a>
+
+    <a href="recipes/es/brownie_vegano.html" class="recipe" data-category="desserts" data-difficulty="medium">
+      <img src="images/vegan_brownie.jpg" alt="Brownie Vegano" />
+      <div class="recipe-info">
+        <h2>Brownie Vegano</h2>
+        <p>Dificultad: Media</p>
+        <p>Tiempo: 40 min</p>
+      </div>
+    </a>
+
+    <a href="recipes/es/arroz_vegano.html" class="recipe" data-category="rice dishes" data-difficulty="medium">
+      <img src="images/vegan_rice.jpg" alt="Arroz Vegano" />
+      <div class="recipe-info">
+        <h2>Arroz Vegano</h2>
+        <p>Dificultad: Facil</p>
+        <p>Tiempo: 30 min</p>
+      </div>
+    </a>
+
+    <a href="recipes/es/albondigas_veganas.html" class="recipe" data-category="stews" data-difficulty="medium">
+      <img src="images/vegan_meatballs.jpg" alt="Albóndigas Veganas">
+      <div class="recipe-info">
+        <h2>Albóndigas Veganas</h2>
+        <p>Dificultad: Media</p>
+        <p>Tiempo: 60 min</p>
+      </div>
+    </a>
+
+    <a href="recipes/es/hummus.html" class="recipe" data-category="appetizers" data-difficulty="easy">
+      <img src="images/hummus.jpg" alt="Hummus" />
+      <div class="recipe-info">
+        <h2>Hummus</h2>
+        <p>Dificultad: Fácil</p>
+        <p>Tiempo: 5 min</p>
+      </div>
+    </a>
+
+    <a href="recipes/es/filetes_de_seitán_en_salsa_de_pimienta.html" class="recipe" data-category="salads" data-difficulty="easy">
+      <img src="images/seitan_steaks_with_pepper_sauce.jpg" alt="Filetes de Seitán en Salsa de Pimienta" />
+      <div class="recipe-info">
+        <h2>Filetes de Seitán con Salsa de Pimienta</h2>
+        <p>Dificultad: Fácil</p>
+        <p>Tiempo: 20 min</p>
+      </div>
+    </a>
+
+    <a href="recipes/es/nachos_con_guarniciones.html" class="recipe" data-category="appetizers" data-difficulty="easy">
+      <img src="images/nachos_with_sides.jpg" alt="Nachos con Guarniciones" />
+      <div class="recipe-info">
+        <h2>Nachos con Guarniciones</h2>
+        <p>Dificultad: Fácil</p>
+        <p>Tiempo: 10 min</p>
+      </div>
+    </a>
+
+    <a href="recipes/es/paella_de_verduras.html" class="recipe" data-category="rice dishes" data-difficulty="easy">
+      <img src="images/vegetable_paella.jpg" alt="Paella de Verduras" />
+      <div class="recipe-info">
+        <h2>Paella de Verduras</h2>
+        <p>Dificultad: Media</p>
+        <p>Tiempo: 35 min</p>
+      </div>
+    </a>
+
+    <a href="recipes/es/natillas_veganas.html" class="recipe" data-category="desserts" data-difficulty="easy">
+      <img src="images/vegan_custard.jpg" alt="Natillas Veganas" />
+      <div class="recipe-info">
+        <h2>Natillas Veganas</h2>
+        <p>Dificultad: Media</p>
+        <p>Tiempo: 210 min</p>
+      </div>
+    </a>
+  </div>
+
+  <a href="index.html" class="back">← Volver al inicio</a>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const categoryFilter = document.getElementById('category-filter');
+    const difficultyFilter = document.getElementById('difficulty-filter');
+    const recipes = document.querySelectorAll('.recipe');
+
+    function filterRecipes() {
+      const text = searchInput.value.toLowerCase();
+      const category = categoryFilter.value.toLowerCase();
+      const difficulty = difficultyFilter.value.toLowerCase();
+
+      recipes.forEach(recipe => {
+        const matchesText = recipe.querySelector('h2').textContent.toLowerCase().includes(text);
+        const matchesCategory = category === "" || recipe.getAttribute('data-category').toLowerCase() === category;
+        const matchesDifficulty = difficulty === "" || recipe.getAttribute('data-difficulty').toLowerCase() === difficulty;
+
+        recipe.style.display = (matchesText && matchesCategory && matchesDifficulty) ? 'block' : 'none';
+      });
+    }
+
+    searchInput.addEventListener('input', filterRecipes);
+    categoryFilter.addEventListener('change', filterRecipes);
+    difficultyFilter.addEventListener('change', filterRecipes);
+  </script>
+</body>
+</html>
+
+
